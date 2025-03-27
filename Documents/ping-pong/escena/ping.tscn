@@ -1,0 +1,45 @@
+[gd_scene load_steps=5 format=3 uid="uid://cimnbte0q53at"]
+
+[ext_resource type="Texture2D" uid="uid://bwf0j6hqcsja4" path="res://imagenes/OIP.jpg" id="1_jnun3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_38lfj"]
+size = Vector2(20, 575)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f5uf5"]
+size = Vector2(30, 571.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1fppd"]
+size = Vector2(1179, 20)
+
+[node name="ping" type="Node2D"]
+
+[node name="fondo" type="Sprite2D" parent="."]
+position = Vector2(579, 325)
+scale = Vector2(2.4346, 1.83099)
+texture = ExtResource("1_jnun3")
+
+[node name="pared izquierda" type="StaticBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="pared izquierda"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pared izquierda"]
+position = Vector2(0, 361.5)
+shape = SubResource("RectangleShape2D_38lfj")
+
+[node name="pared derecha" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pared derecha"]
+position = Vector2(1162, 364.75)
+shape = SubResource("RectangleShape2D_f5uf5")
+
+[node name="pared superior" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pared superior"]
+position = Vector2(587.5, 68)
+shape = SubResource("RectangleShape2D_1fppd")
+
+[node name="pared inferior" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pared inferior"]
+position = Vector2(589, 639)
+shape = SubResource("RectangleShape2D_1fppd")
